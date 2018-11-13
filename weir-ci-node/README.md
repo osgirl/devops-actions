@@ -11,7 +11,7 @@ This GitHub Action utilizes the internal-only [weir-ci-node](https://developers.
 |`BITBUCKET_USER`|`jsmith`|BitBucket user name.|❌|
 |`BITBUCKET_PASSWORD`|`mysecretpassword`|BitBucket password.|❌|
 |`PROJECT_PATH`|`./`|Relative path to your project root. Defaults to `./`|✅|
-|`REPORTS_PATH`|`./results/`|Relative to store results. Defaults to `./results/`|✅|
+|`REPORTS_PATH`|`./results/`|Relative path to store results. Defaults to `./results/`|✅|
 
 ### Secrets/Run Options
 

@@ -21,6 +21,10 @@ These options are described in the Slack [Message Attachment](https://api.slack.
 |`SLACK_FOOTER`|`GitHub Action`|The footer text of the message.|
 |`SLACK_FOOTER_ICON`|`https://github.com/favicon.ico`|The footer icon of the message.|
 
+### Message text
+
+Include your desired text in the `args` section of the GitHub Action.
+
 ### Workflow
 
 ```javascript
