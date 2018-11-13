@@ -16,6 +16,8 @@ if [ -z "$SLACK_FOOTER" ]; then
   export SLACK_FOOTER="GitHub Action"
 fi
 
+export SLACK_FOOTER="$SLACK_FOOTER - $GITHUB_REF ($GITHUB_SHA) - $GITHUB_REPOSITORY"
+
 if [ -z "$SLACK_FOOTER_ICON" ]; then
   export SLACK_FOOTER_ICON="https://github.com/favicon.ico"
 fi
