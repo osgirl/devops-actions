@@ -28,9 +28,10 @@ workflow "Deploy" {
 
 action "Deploy to Azure App Service" {
   uses "weirgroup/devops-actions/azure-zipdeploy@master"
-  secrets = ["AZURE_LOGIN", "AZURE_PASSWORD", "AZURE_SCM_URL"]
+  secrets = ["AZURE_LOGIN", "AZURE_PASSWORD"]
   env = {
     "PROJECT_PATH" = "./"
+    "AZURE_SCM_URL" = "my-app-service.scm.azurewebsites.net"
   }
 }
 ```
