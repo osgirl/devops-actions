@@ -1,4 +1,4 @@
-FROM node:boron
+FROM node:carbon
 
 LABEL "version"="1.0.0"
 LABEL com.github.actions.name="GitHub Action for Slack"
