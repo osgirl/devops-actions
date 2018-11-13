@@ -26,13 +26,15 @@ If any of the options below are not included then the respective option will not
 |`JEST`|`true`|Run [Jest](https://jestjs.io/) unit tests on the project.|✅|
 |`CYPRESS_KEY`|`XXXXXXXXX`|Run [Cypress](https://cypress.io) E2E tests on the project.|✅|
 
-> Include any other project dependant variables used to run your application.
-
 ### Environment variables
 
 |Variable|Example|Description|Optional|
 |---|---|---|---|
 |`NPM_RUN_CMD`|`start`|The npm run `command` to use to start the project.|❌|
+
+### Project Environment Variables
+
+Since the Weir CI Node tool launches your project internally, the GitHub Action also requires that you provide any other project dependant environment variables used to run your application.
 
 ### Workflow
 
