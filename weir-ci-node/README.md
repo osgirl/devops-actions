@@ -4,7 +4,7 @@ This GitHub Action utilizes the internal-only [weir-ci-node](https://developers.
 
 ## Configuration
 
-### Secrets (Required)
+### Secrets
 
 |Secret|Example|Description|Optional|
 |---|---|---|---|
@@ -13,7 +13,7 @@ This GitHub Action utilizes the internal-only [weir-ci-node](https://developers.
 |`PROJECT_PATH`|`./`|Relative path to your project root. Defaults to `./`|✅|
 |`REPORTS_PATH`|`./results/`|Relative to store results. Defaults to `./results/`|✅|
 
-### Secrets/Run Options (Optional)
+### Secrets/Run Options
 
 If any of the options below are not included then the respective option will not be used to run weir-ci-node.
 
@@ -28,7 +28,7 @@ If any of the options below are not included then the respective option will not
 
 > Include any other project dependant variables used to run your application.
 
-### Environment variables (Optional)
+### Environment variables
 
 |Variable|Example|Description|Optional|
 |---|---|---|---|
