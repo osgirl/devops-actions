@@ -8,9 +8,9 @@ if [ -z "$SLACK_TOKEN" ] || [ -z "$SLACK_CHANNEL" ]; then
   exit 1
 fi
 
-curl -X POST -H 'Authorization: Bearer $SLACK_TOKEN' \
+eval "curl -X POST -H 'Authorization: Bearer $SLACK_TOKEN' \
 -H 'Content-type: application/json' \
 --data '{"channel":"$SLACK_CHANNEL","text":"$*"}' \
-https://slack.com/api/chat.postMessage
+https://slack.com/api/chat.postMessage"
 
 exit 0
