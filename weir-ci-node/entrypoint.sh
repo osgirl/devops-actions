@@ -63,8 +63,8 @@ echo 'Configuration complete...'
 
 echo 'Starting server and waiting...'
 # If we're using ZAP_URL or CYPRESS_KEY then we should wait for the server to start before running.
-if [ -n "$ZAP_URL" ] || [ -n "$CYPRESS_KEY" ]; then
-  npm run start & wait-on $ZAP_URL
+if [ -n "$ZAP_TARGET_URL" ] || [ -n "$CYPRESS_KEY" ]; then
+  npm run $NPM_RUN_CMD & wait-on $ZAP_TARGET_URL
 fi
 
 echo 'Running WEIR-CI-NODE tool...'
