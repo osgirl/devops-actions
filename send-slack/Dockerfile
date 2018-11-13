@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM node:boron
 
 LABEL "version"="1.0.0"
 LABEL com.github.actions.name="GitHub Action for Slack"
