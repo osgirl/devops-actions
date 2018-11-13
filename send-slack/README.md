@@ -12,6 +12,7 @@ This GitHub Action utilizes the Slack [Chat Post Message](https://api.slack.com/
 |`SLACK_CHANNEL`|`#devops`|Slack channel you wish to send messages to.|
 
 ### Environment variables (Optional)
+
 These options are described in the Slack [Message Attachment](https://api.slack.com/docs/message-attachments) docs.
 
 |Variable|Example|Description|
@@ -22,20 +23,20 @@ These options are described in the Slack [Message Attachment](https://api.slack.
 
 ### Workflow
 
-```
+```javascript
 workflow "New Commit" {
-	on = "push"
-	resolves = ["Report Commit to Slack"]
+  on = "push"
+  resolves = ["Report Commit to Slack"]
 }
 
 action "Report Commit to Slack" {
-	uses "weirgroup/devops-actions/send-slack@master"
-	secrets = ["SLACK_TOKEN", "SLACK_CHANNEL"]
-	env = {
-		"SLACK_COLOR" = "#005EB8"
-		"SLACK_FOOTER" = "Weir GitHub Action"
-		"SLACK_FOOTER_ICON" = "https://github.com/favicon.ico"
-	}
-	args = "New Commit $GITHUB_REF ($GITHUB_SHA) - $GITHUB_REPOSITORY"
+  uses "weirgroup/devops-actions/send-slack@master"
+  secrets = ["SLACK_TOKEN", "SLACK_CHANNEL"]
+  env = {
+    "SLACK_COLOR" = "#005EB8"
+    "SLACK_FOOTER" = "Weir GitHub Action"
+    "SLACK_FOOTER_ICON" = "https://github.com/favicon.ico"
+  }
+  args = "Workflow started..."
 }
 ```
