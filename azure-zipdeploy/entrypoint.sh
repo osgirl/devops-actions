@@ -16,7 +16,7 @@ fi
 echo 'Zipping the site...'
 zip -r site.zip $PROJECT_PATH*
 zip -rv site.zip .deployment
-echo 'Uploading site.zip to the Azure App Service...'
+echo 'Uploading site.zip to the Azure App Service... '
 curl -X POST --data-binary @site.zip https://$AZURE_LOGIN:$AZURE_PASSWORD@$AZURE_SCM_URL/api/zipdeploy?async=true
 echo 'Completed!'
 exit 0
