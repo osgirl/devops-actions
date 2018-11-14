@@ -34,7 +34,7 @@ workflow "New Commit" {
 }
 
 action "Report Commit to Slack" {
-  uses "weirgroup/devops-actions/send-slack@master"
+  uses "weirgroup/devops-actions/slack-msg@master"
   secrets = ["SLACK_TOKEN", "SLACK_CHANNEL"]
   env = {
     "SLACK_COLOR" = "#005EB8"

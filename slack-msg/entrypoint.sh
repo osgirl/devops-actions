@@ -2,7 +2,7 @@
 
 set -e
 
-echo 'Preparing the Slack Command...'
+echo 'Preparing the Slack Message...'
 if [ -z "$SLACK_TOKEN" ] || [ -z "$SLACK_CHANNEL" ]; then
   echo 'SLACK_TOKEN or SLACK_CHANNEL not supplied.'
   exit 1
