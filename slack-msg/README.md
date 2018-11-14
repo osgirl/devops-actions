@@ -23,7 +23,7 @@ These options are described in the Slack [Message Attachment](https://api.slack.
 
 ### Message text
 
-Include your desired text in the `args` section of the GitHub Action.
+Include the desired text in the `args` section of the GitHub Action.
 
 ### Workflow
 
