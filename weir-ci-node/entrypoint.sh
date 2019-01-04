@@ -9,10 +9,12 @@ if [ -z "$BITBUCKET_USER" ] || [ -z "$BITBUCKET_PASSWORD" ]; then
   exit 1
 fi
 
-npm install https://$BITBUCKET_USER:$BITBUCKET_PASSWORD@bitbucket.org/weir-spm/weir-ci-node.git
+npm install git@github.com:weirgroup/weir-ci-node.git
 
+if [ -n "$RETIRE" ]; then
 echo 'Installing retire and wait-on...'
 npm install -g retire wait-on
+fi
 
 echo 'Configuring the Weir-CI-Node Tool...'
 # Setup our initial RUN_CMD
