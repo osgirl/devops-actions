@@ -8,8 +8,7 @@ This GitHub Action utilizes the internal-only [weir-ci-node](https://developers.
 
 |Secret|Example|Description|Optional|
 |---|---|---|---|
-|`BITBUCKET_USER`|`jsmith`|BitBucket user name.|❌|
-|`BITBUCKET_PASSWORD`|`mysecretpassword`|BitBucket password.|❌|
+|`OAUTH_TOKEN`|`mytoken`|This is a [personal access token](https://github.com/settings/tokens) from GitHub.|❌|
 |`PROJECT_PATH`|`./`|Relative path to your project root. Defaults to `./`|✅|
 |`REPORTS_PATH`|`./results/`|Relative path to store results. Defaults to `./results/`|✅|
 
