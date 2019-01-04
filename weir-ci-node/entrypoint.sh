@@ -4,12 +4,12 @@ set -e
 echo 'Initializing the Weir-CI-Node Action...'
 
 echo 'Installing the Weir-CI-Node Tool...'
-if [ -z "$BITBUCKET_USER" ] || [ -z "$BITBUCKET_PASSWORD" ]; then
-  echo 'BitBucket credentials were not supplied.'
+if [ -z "$OAUTH_TOKEN" ]; then
+  echo 'An oauth token was not supplied.'
   exit 1
 fi
 
-npm install git+ssh://git@github.com:weirgroup/weir-ci-node.git
+npm install git+https://$OAUTH_TOKEN:x-oauth-basic@github.com/weirgroup/weir-ci-node.git
 
 if [ -n "$RETIRE" ]; then
 echo 'Installing retire and wait-on...'
