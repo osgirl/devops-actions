@@ -9,7 +9,7 @@ if [ -z "$BITBUCKET_USER" ] || [ -z "$BITBUCKET_PASSWORD" ]; then
   exit 1
 fi
 
-npm install git@github.com:weirgroup/weir-ci-node.git
+npm install git+ssh://git@github.com:weirgroup/weir-ci-node.git
 
 if [ -n "$RETIRE" ]; then
 echo 'Installing retire and wait-on...'
