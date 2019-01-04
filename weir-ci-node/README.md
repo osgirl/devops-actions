@@ -45,7 +45,7 @@ workflow "New Commit" {
 
 action "Run Weir-CI-Node" {
   uses = "weirgroup/devops-actions/weir-ci-node@master"
-  secrets = ["BITBUCKET_PASSWORD", "BITBUCKET_USER", "PROJECT_PATH", "REPORTS_PATH", "RETIRE", "SLACK_CHANNEL", "SLACK_TOKEN" "ZAP_TARGET_URL"]
+  secrets = ["OAUTH_TOKEN", "PROJECT_PATH", "REPORTS_PATH", "RETIRE", "SLACK_CHANNEL", "SLACK_TOKEN" "ZAP_TARGET_URL"]
   env = {
     NPM_RUN_CMD = "start"
   }
