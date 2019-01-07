@@ -1,6 +1,6 @@
 # GitHub Action to run any command
 
-This GitHub Action utilizes the internal-only [weir-ci-node](https://developers.weir/docs/guides/node/weir-ci-node-guide.html) tool.  It opens a command line and runs the command from the args.  You can use this command to do anything you would like.  For example, you can run a git clone, build, and push to a new repo.
+It opens a command line and runs the command from the args.  You can use this command to do anything you would like.  For example, you can run a git clone, build, and push to a new repo.
 
 ## Configuration
 
