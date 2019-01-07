@@ -19,7 +19,6 @@ workflow "New Commit" {
 
 action "Run any command" {
   uses = "weirgroup/devops-actions/weir-cmd@master"
-  secrets = ["BITBUCKET_PASSWORD", "BITBUCKET_USER", "PROJECT_PATH", "REPORTS_PATH", "RETIRE", "SLACK_CHANNEL", "SLACK_TOKEN" "ZAP_TARGET_URL"]
   args = "echo $(pwd)"
 }
 ```
