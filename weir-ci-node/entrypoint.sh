@@ -72,4 +72,5 @@ fi
 echo 'Running WEIR-CI-NODE tool...'
 eval "$RUN_CMD"
 # node_modules/.bin/weir-ci-node run --projectpath ./ --reportspath ./results/ --retire --slacktoken $SLACK_TOKEN --slackchannel $SLACK_CHANNEL --cypress $CYPRESS_KEY --zappath $ZAP_PATH --zapurl http://localhost:8088/
+npm uninstall weir-ci-node
 exit 0
