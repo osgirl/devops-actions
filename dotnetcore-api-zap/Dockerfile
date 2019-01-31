@@ -7,6 +7,6 @@ LABEL com.github.actions.description="GitHub Action to perform ZAP test against 
 LABEL com.github.actions.icon="triange"
 LABEL com.github.actions.color="blue"
 
-COPY entrypoint /entrypoint
+COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
