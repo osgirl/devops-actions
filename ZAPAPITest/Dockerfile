@@ -1,4 +1,4 @@
-FROM debian:9.5-slim
+FROM docker:stable
 
 LABEL "name"="Custom ZAP Action"
 LABEL "maintainer"="GitHub Actions <senthilkumar.nh@mail.weir>"
