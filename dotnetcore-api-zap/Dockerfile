@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:sdk
+FROM owasp/zap2docker-weekly:latest
 
 LABEL version="1.0.0"
 LABEL maintainer="WEIR"
@@ -7,8 +7,11 @@ LABEL com.github.actions.description="GitHub Action to perform ZAP test against 
 LABEL com.github.actions.icon="triange"
 LABEL com.github.actions.color="blue"
 
-COPY entrypoint.sh /entrypoint.sh
 
+COPY dotnet-install.sh /dotnet-install.sh
+RUN /dotnet-install.sh
+
+COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
