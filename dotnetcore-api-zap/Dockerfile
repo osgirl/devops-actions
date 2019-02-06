@@ -7,6 +7,7 @@ LABEL com.github.actions.description="GitHub Action to perform ZAP test against 
 LABEL com.github.actions.icon="triange"
 LABEL com.github.actions.color="blue"
 
+USER root
 COPY dotnet-install.sh /dotnet-install.sh
 RUN chmod +x /dotnet-install.sh
 RUN /dotnet-install.sh
