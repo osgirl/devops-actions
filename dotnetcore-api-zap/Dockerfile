@@ -10,10 +10,17 @@ LABEL com.github.actions.color="blue"
 USER root
 COPY dotnet-install.sh /dotnet-install.sh
 RUN chmod +x /dotnet-install.sh
-
 RUN /dotnet-install.sh --install-dir /zap/dotnetcore
+
+RUN apt-get update
+RUN apt-get install -y curl
+RUN apt-get install -y nodejs
+
+RUN apt-get install -y npm
+RUN npm install -g wait-on
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
+
