@@ -19,6 +19,7 @@ RUN apt-get install -y nodejs
 RUN apt-get install -y npm
 RUN npm install -g wait-on
 RUN npm install -g get-ip
+RUN npm install get-ip
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
