@@ -9,6 +9,12 @@ LABEL "com.github.actions.description"="Runs application docker and performs the
 LABEL "com.github.actions.icon"="package"
 LABEL "com.github.actions.color"="blue"
 
+RUN apk add --update nodejs nodejs-npm
+
+RUN npm install -g wait-on
+RUN npm install -g get-ip
+RUN npm install get-ip
+
 COPY entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /entrypoint.sh
