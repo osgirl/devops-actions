@@ -20,7 +20,7 @@ RUN apk add --update bash && rm -rf /var/cache/apk/*
 COPY dotnet-install.sh /dotnet-install.sh
 RUN chmod +x /dotnet-install.sh
 RUN mkdir /dotnetcore
-RUN /dotnet-install.sh --install-dir /zap/dotnetcore
+RUN /dotnet-install.sh --install-dir /dotnetcore
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
