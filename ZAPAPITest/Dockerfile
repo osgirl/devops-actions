@@ -9,8 +9,15 @@ LABEL "com.github.actions.description"="Runs application docker and performs the
 LABEL "com.github.actions.icon"="package"
 LABEL "com.github.actions.color"="blue"
 
-COPY entrypoint.sh /entrypoint.sh
+USER root
 
+RUN apk add --update bash && rm -rf /var/cache/apk/*
+COPY dotnet-install.sh /dotnet-install.sh
+RUN chmod +x /dotnet-install.sh
+RUN mkdir /dotnetcore
+RUN /dotnet-install.sh --install-dir /zap/dotnetcore
+
+COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
