@@ -11,6 +11,21 @@ LABEL "com.github.actions.color"="blue"
 
 USER root
 
+RUN apk add --no-cache \
+    ca-certificates \
+    \
+    # .NET Core dependencies
+    krb5-libs \
+    libgcc \
+    libintl \
+    libssl1.0 \
+    libstdc++ \
+    tzdata \
+    userspace-rcu \
+    zlib \
+    && apk -X https://dl-cdn.alpinelinux.org/alpine/edge/main add --no-cache \
+    lttng-ust
+
 RUN apk add --update nodejs nodejs-npm
 
 RUN npm install -g wait-on
