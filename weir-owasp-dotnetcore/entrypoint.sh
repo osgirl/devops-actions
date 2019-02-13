@@ -13,6 +13,5 @@ docker pull owasp/zap2docker-weekly
 wait-on "http://$currentmachineip:8048/swagger/v1/swagger.json" -t 120000
 docker run -t owasp/zap2docker-weekly zap-api-scan.py -t http://$currentmachineip:8048/swagger/v1/swagger.json -f openapi
 wget -O swagger.json "http://$currentmachineip:8048/swagger/v1/swagger.json"
-cat swagger.json
 docker run -t owasp/zap2docker-weekly zap-api-scan.py -t /swagger.json -f openapi
 echo 'ZAP Test End'
