@@ -26,6 +26,8 @@ RUN apk add --no-cache \
     && apk -X https://dl-cdn.alpinelinux.org/alpine/edge/main add --no-cache \
     lttng-ust
 
+ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=true
+
 RUN apk add --update nodejs nodejs-npm
 
 RUN npm install -g wait-on
