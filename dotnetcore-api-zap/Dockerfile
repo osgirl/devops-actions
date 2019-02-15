@@ -21,6 +21,7 @@ RUN npm install -g wait-on
 RUN npm install -g get-ip
 RUN npm install get-ip
 
+RUN mkdir /.dockerenv
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
