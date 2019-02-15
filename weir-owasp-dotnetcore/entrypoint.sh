@@ -20,5 +20,5 @@ currentmachineip=$(get-ip)
 nohup /usr/share/dotnet/dotnet run --configuration Release --project $PROJECT_PATH &
 docker pull owasp/zap2docker-weekly
 wait-on "http://localhost:5000/swagger/v1/swagger.json" -t 120000
-docker run -t owasp/zap2docker-weekly zap-api-scan.py -t http://localhost:5000/swagger/v1/swagger.json -f openapi 
+docker run --network="host" -t owasp/zap2docker-weekly zap-api-scan.py -t http://localhost:5000/swagger/v1/swagger.json -f openapi 
 echo 'ZAP Test End'
