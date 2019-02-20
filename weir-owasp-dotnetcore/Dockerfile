@@ -26,6 +26,7 @@ RUN apk add --no-cache \
     lttng-ust
 
 ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=true
+ENV ASPNETCORE_ENVIRONMENT=Production
 
 RUN apk add --update nodejs nodejs-npm
 
