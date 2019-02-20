@@ -10,14 +10,6 @@ This Action is for perform OWASP testing against a given dotnet core web API pro
 |---|---|---|---|
 |`PROJECT_PATH`|`./src/WEIR.CDE.OG.ServiceAPP.API/WEIR.CDE.OG.ServiceAPP.API.csproj`|Relative path to your project file.|❌|
 
-### Secrets/Run Options
-
-If any of the options below are not included then the respective option will not be used to run weir-ci-node.
-
-|Secret|Example|Description|Optional|
-|---|---|---|---|
-|`SLACK_TOKEN`|`xoxb-xxxxxxxxx-xxxx`|Valid Slack token for your workspace.|✅|
-|`SLACK_CHANNEL`|`#devops`|Valid Slack channel for your workspace.|✅|
 
 ### Project Environment Variables
 
@@ -33,7 +25,7 @@ workflow "New Commit" {
 
 action "Run OWASP Test" {
   uses = "weirgroup/devops-actions/weir-owasp-dotnetcore@dotnetcore-api-owasp-testaction"
-  secrets = []
+  secrets = ["PROJECT_PATH"]
   env = {    
   }
 }
