@@ -32,7 +32,6 @@ RUN apk add --update nodejs nodejs-npm
 
 RUN npm install -g wait-on
 RUN npm install -g get-ip
-RUN npm install -g get-port-cli
 
 RUN apk add --update bash && rm -rf /var/cache/apk/*
 COPY dotnet-install.sh /dotnet-install.sh
